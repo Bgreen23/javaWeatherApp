@@ -14,7 +14,8 @@ public class FinalWeatherApp{
 
 	public static void main(String[] args) {
 		String appID = "055070dbf102db3cb164033826eb1e3a";
-		System.out.println("This is UNSC A.I. Serial Number CTN0452-9. Who's Weather Do You Want To Check Today? \nEx: Lancaster, PA, US");
+//  Add after the question mark for future client ease of use:		\nEx: Lancaster, PA, US
+		System.out.println("This is UNSC A.I. Serial Number CTN0452-9. Who's Weather Do You Want To Check Today?");
 		Scanner sc = new Scanner(System.in);
 		String location = sc.nextLine();
 		System.out.println("I thought you'd never ask.");
@@ -43,7 +44,7 @@ public class FinalWeatherApp{
 		        System.out.println("\n" + cityName); 
 		        JSONArray jsonarr_1 = (JSONArray) jobj.get("weather");
 				//Gets data for array
-				for(int i=0;i<jsonarr_1.size();i++) {
+				for(int i=1; i < jsonarr_1.size(); i++) {
 					//Stores in an array
 					JSONObject jsonobj_1 = (JSONObject)jsonarr_1.get(i);
 					//Store the JSON object in JSON array as objects (For level 2 array element i.e Address Components)
